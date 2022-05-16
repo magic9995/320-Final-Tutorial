@@ -14898,10 +14898,16 @@ Index Change Special: 9.982887537993921
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Step-4:-Hypothesis-Testing">Step 4: Hypothesis Testing<a class="anchor-link" href="#Step-4:-Hypothesis-Testing">&#182;</a></h2>
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here I do my first regression testing. I try to examine the two obvious variables in this analysis, the stock_drop variable and the stock_diff variable ( the 1 year growth in stock price ). The result is a pretty weak correlation. The coefficient of the regression equation is itself negative, indicating a that stocks that drop after earnings release earn more in the following year, but the coefficient is so small that it is negligible. Further analysis in finding R^squared shows just how weak the relationship is: -.001. This is a pretty abysmal result, and the conclusion at this point is already starting to become clear. The stock market does not seem to have any noticeable overreaction to wild earnings reports.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[129]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Basic Linear Regression</span>
@@ -14944,9 +14950,9 @@ Index Change Special: 9.982887537993921
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>coefficient: -0.06681682273221602, intercept: 15.055231119438988
-The r2 is:  -0.0014461979321307439
-The rmse is:  22.56205991538974
+<pre>coefficient: -0.21911388499492884, intercept: 14.928999885406474
+The r2 is:  -0.004153452062381602
+The rmse is:  22.50079249289678
 </pre>
 </div>
 </div>
@@ -14955,10 +14961,16 @@ The rmse is:  22.56205991538974
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Here I take my analysis further. I adjust the 1 year growth in stock price by standardizing it with the growth in the market at large. This means I am taking out the effect of market momentum in my analysis. The result highlights the lack of relationship even further. Now, with overall market momentum removed factored out, R^2 is at -.0003. At this point, there is no denying it. The relationship between stock market reactions and stock price growth for 1 year is non-existent. There is absolutely no evidence indicating that this relationship exists.</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Basic Linear Regression</span>
@@ -15001,9 +15013,9 @@ The rmse is:  22.56205991538974
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>coefficient: 0.1840675286289147, intercept: 6.922569316034227
-The r2 is:  0.25343941951695315
-The rmse is:  7.046993351483036
+<pre>coefficient: -0.3935993636188412, intercept: 3.0193627956752587
+The r2 is:  -0.0003689066971899191
+The rmse is:  23.469601212808403
 </pre>
 </div>
 </div>
@@ -15023,6 +15035,20 @@ The rmse is:  7.046993351483036
 <p>The rather disappointing conclusion here seems to be that there is little correlation between a reaction in the market to earnings and the resulting growth. The overreaction hypothesis does not seem to hold here. It actually reflects rather well on market participants, showing that there is indeed a rational allocation of capital occurring in financial markets, where investors are able to see past the veil of bad news and buy and sell stocks when appropraite based on fundamental factors rather than heltor-skeltor thinking. The paper that was published by Thaler and De Bondt is itself a little under 40 years old, and so market overreaction is probably a well known phenomenon at this point among institutional investors espcially, so the market is able to find the appropriate equilibrium. This is disappointing as it closes the door on an investment idea, but there's always more to explore!</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
